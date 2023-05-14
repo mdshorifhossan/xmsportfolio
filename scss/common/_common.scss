@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+a {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+    color: #121212;
+}

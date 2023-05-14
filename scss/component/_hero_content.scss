@@ -1,0 +1,86 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#hero_content {
+    padding: 200px 0 100px;
+    background: $color-gnd;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        background: $color-sp_1;
+        width: 20%;
+        height: 50%;
+        position: absolute;
+        top: 0%;
+        left: -8%;
+        transform: rotate(35deg);
+        z-index: -1;
+    }
+
+    &::before {
+        content: "";
+        background: $color-sp_1;
+        width: 20%;
+        height: 60%;
+        position: absolute;
+        top: 30%;
+        right: -8%;
+        transform: rotate(35deg);
+        z-index: -1;
+    }
+
+    .hero_main {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            background: $color-sp_1;
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            top: -120%;
+            left: 50%;
+            transform: rotate(35deg);
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        &::before {
+            content: "";
+            background: $color-sp_1;
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            bottom: -100%;
+            left: 25%;
+            transform: rotate(35deg);
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 70px;
+            text-transform: capitalize;
+            color: $color-ff;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 32px;
+            color: $color-ff;
+            text-transform: uppercase;
+            padding-bottom: 120px;
+            letter-spacing: 10px;
+        }
+
+        a {
+            @include btn;
+        }
+
+    }
+}

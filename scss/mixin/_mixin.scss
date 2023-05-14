@@ -1,0 +1,101 @@
+@mixin btn {
+    font-weight: 600;
+    font-size: 20px;
+    color: $color-bl;
+    background: $color-ff;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all linear 0.3s;
+    box-shadow: 0 0px 0px 1px $color-bl_1;
+
+    &:hover {
+        box-shadow: 0 10px 15px -3px $color-bl_1;
+        background: $color-rd;
+        color: $color-ff;
+    }
+}
+
+@mixin cmn_sub_head {
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    color: $color-rd;
+}
+
+@mixin cmn_main_head {
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 32px;
+
+
+    &::after {
+        content: "";
+        background: $color-rd;
+        width: 60px;
+        height: 4px;
+        position: absolute;
+        top: -15%;
+        left: 0%;
+    }
+
+    &::before {
+        content: "";
+        background: $color-rd;
+        width: 6px;
+        height: 4px;
+        position: absolute;
+        top: -15%;
+        left: 11%;
+    }
+}
+
+@mixin ser_icon {
+    font-size: 40px;
+    font-weight: 700;
+    color: $color-rd;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    opacity: 0.05;
+}
+
+@mixin testi_nu {
+    position: absolute;
+    bottom: -30%;
+    right: 5%;
+    z-index: -1;
+    font-size: 82px;
+    font-weight: 800;
+    color: $color-bl_2;
+    opacity: 0.3;
+}
+
+@mixin lg {
+    padding: 50px 0;
+    text-align: center;
+
+    p {
+        font-size: 24px;
+        font-weight: 500;
+        color: $color-bl-lg;
+        transition: all linear 0.3s;
+    }
+
+    &:hover {
+        p {
+            color: $gl-g;
+        }
+    }
+}
+
+@mixin xsm-lg {
+    padding: 30px 0;
+
+    p {
+        font-size: 20px;
+    }
+}

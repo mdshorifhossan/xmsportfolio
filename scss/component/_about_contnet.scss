@@ -1,0 +1,37 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#about_contnet {
+    padding: 100px 0;
+
+    .about_main {
+        align-items: center;
+        .about_info {
+            padding-left: 80px;
+
+            h4 {
+                @include cmn_sub_head;
+            }
+
+            h3 {
+                @include cmn_main_head;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 26px;
+            }
+
+            .mr{
+                margin-right: 15px;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 30px;
+                @include btn;
+            }
+        }
+    }
+}

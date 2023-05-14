@@ -1,0 +1,115 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+
+#portfolio_content {
+
+    .portfolio_main {
+
+        h4 {
+            @include cmn_sub_head;
+        }
+
+        h3 {
+            @include cmn_main_head;
+
+            &::before {
+                left: 20%;
+            }
+        }
+    }
+
+    .port_main {
+        margin: 30px 0 100px;
+        row-gap: 20px;
+
+        .port_item {
+            position: relative;
+            z-index: 1;
+            box-shadow: 0px 0px 5px $color-dd;
+            overflow: hidden;
+            transition: all linear 0.3s;
+
+            img{
+                transition: all linear 0.3s;
+            }
+
+            &:hover {
+                box-shadow: 0 10px 15px -3px $color-bl_1;
+
+                img {
+                    transform: scale(1.6) rotate(5deg);
+                }
+
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: $color-rd;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                opacity: 0;
+                transition: all linear 0.3s;
+            }
+
+            .port_info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                transition: all linear 0.3s;
+
+                position: absolute;
+                width: 70%;
+                height: 70%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.8);
+                z-index: 3;
+                opacity: 0;
+
+
+                span {
+                    font-size: 20px;
+                    padding-bottom: 10px;
+
+                    svg {
+                        color: $color-ff;
+                    }
+                }
+
+                h5 {
+                    font-weight: 600;
+                    font-size: 24px;
+                    color: $color-ff;
+                    padding-bottom: 5px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $color-ff;
+                    padding: 0 10px;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0.8;
+                }
+
+                .port_info {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+
+        }
+    }
+
+}

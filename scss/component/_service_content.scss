@@ -1,0 +1,177 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#service_content {
+    padding: 0 0 50px;
+
+    .service_main {
+        margin-bottom: 80px;
+
+        h3 {
+            @include cmn_main_head;
+            color: $color-bl;
+
+            &::before {
+                left: 20%;
+            }
+        }
+
+        h4 {
+            @include cmn_sub_head;
+            color: $color-rd;
+        }
+
+        .service_items {
+            background: $color-ff;
+            padding: 50px 20px;
+            box-shadow: 0px 0px 1px $color-bl;
+            overflow: hidden;
+
+            &:hover {
+                box-shadow: 0 10px 15px -3px $color-bl_1;
+            }
+
+            img {
+                width: 20%;
+                padding-top: 20px;
+            }
+
+            h5 {
+                padding: 30px 0 10px;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        .icon_1 {
+            position: relative;
+
+            &::after {
+                @include ser_icon;
+                content: "01";
+            }
+        }
+
+        .icon_2 {
+            position: relative;
+
+            &::after {
+                @include ser_icon;
+                content: "02";
+            }
+        }
+
+        .icon_3 {
+            position: relative;
+
+            &::after {
+                @include ser_icon;
+                content: "03";
+            }
+        }
+
+        .icon_4 {
+            position: relative;
+
+            &::after {
+                @include ser_icon;
+                content: "04";
+            }
+        }
+    }
+
+    .container-fluid {
+        margin: 100px 0 50px 0;
+        box-shadow: 0 0 25px -3px $color-bl_1;
+
+        .gl-lg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            background: $color-ff;
+
+            p {
+                font-size: 24px;
+                font-weight: 500;
+                color: $color-bl-lg;
+                transition: all linear 0.3s;
+            }
+
+            &:hover {
+                p {
+                    &:nth-child(1) {
+                        color: $gl-g;
+                    }
+
+                    &:nth-child(2) {
+                        color: $gl-o-e;
+                    }
+
+                    &:nth-child(3) {
+                        color: $gl-o_1;
+                    }
+
+                    &:nth-child(4) {
+                        color: $gl-g;
+                    }
+
+                    &:nth-child(5) {
+                        color: $gl-l;
+                    }
+
+                    &:nth-child(6) {
+                        color: $gl-o-e;
+                    }
+                }
+            }
+        }
+
+        .tw-lg {
+            @include lg;
+        }
+
+        .is-lg {
+            @include lg;
+
+            &:hover {
+                p {
+                    color: $color-ec0086;
+                }
+            }
+        }
+
+        .pi-lg {
+            @include lg;
+
+            &:hover {
+                p {
+                    color: #ae001a;
+                }
+            }
+        }
+
+        .gi-lg {
+            @include lg;
+
+            &:hover {
+                p {
+                    color: $color-bl;
+                }
+            }
+        }
+
+        .li-lg {
+            @include lg;
+        }
+        .fab-lg {
+            @include lg;
+        }
+    }
+}

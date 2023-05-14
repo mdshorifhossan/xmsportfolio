@@ -1,0 +1,202 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#testimonial_content {
+    padding: 0 0 100px;
+
+    .testi_main {
+        margin-bottom: 50px;
+
+        h4 {
+            @include cmn_sub_head;
+        }
+
+        h3 {
+            @include cmn_main_head;
+
+            &::before {
+                left: 20%;
+            }
+        }
+    }
+
+    .slick_silder {
+        .col-lg-6 {
+            padding: 50px 0;
+
+            .test_01 {
+
+                &::before {
+                    @include testi_nu;
+                    content: "01";
+                }
+            }
+
+            .test_02 {
+                &::before {
+                    @include testi_nu;
+                    content: "02";
+                }
+            }
+
+            .test_03 {
+
+                &::before {
+                    @include testi_nu;
+                    content: "03";
+                }
+            }
+        }
+    }
+
+    .slick_silder_2 {
+        margin-left: 25%;
+        position: relative;
+
+        .slider_item {
+            padding: 50px 0;
+            width: 50% !important;
+
+
+            .test_01 {
+                &::before {
+                    @include testi_nu;
+                    content: "03";
+                }
+            }
+
+            .test_02 {
+                &::before {
+                    @include testi_nu;
+                    content: "01";
+                }
+            }
+
+            .test_03 {
+                &::before {
+                    @include testi_nu;
+                    content: "02";
+                }
+            }
+        }
+
+        .left_arrow {
+            position: absolute;
+            top: 35%;
+            left: -13%;
+            background: $color-ff;
+            padding: 10px 21px;
+            font-size: 24px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px -3px $color-rd_2;
+            transition: all linear 0.3s;
+
+            svg {
+                color: $color-rd;
+                transition: all linear 0.3s;
+            }
+
+            &:hover {
+                background: $color-rd;
+
+                svg {
+                    color: $color-ff;
+                }
+            }
+        }
+
+
+        .right_arrow {
+            position: absolute;
+            top: 35%;
+            right: 35%;
+            background: $color-ff;
+            padding: 10px 21px;
+            font-size: 24px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px -3px $color-rd_2;
+            transition: all linear 0.3s;
+
+            svg {
+                color: $color-rd;
+                transition: all linear 0.3s;
+            }
+
+            &:hover {
+                background: $color-rd;
+
+                svg {
+                    color: $color-ff;
+                }
+            }
+        }
+    }
+
+    .testi_item {
+        padding: 0 25px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: row;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 88%;
+            height: 150%;
+            position: absolute;
+            top: -25%;
+            left: 10%;
+            z-index: -1;
+            border: 1px solid $color-bl_2;
+            transition: all linear 0.2s;
+        }
+
+        &::before {
+            @include testi_nu;
+            content: "01";
+        }
+
+
+        &:hover {
+            &::after {
+                transform: scale(1.03);
+                border: 1px solid $color-rd_2;
+            }
+        }
+
+        .testi_img {
+            width: 40%;
+        }
+
+        .testi_info {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-left: 20px;
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                padding-bottom: 10px;
+            }
+
+            h3 {
+                font-weight: 800;
+                font-size: 20px;
+                padding-top: 10px;
+
+                span {
+                    display: block;
+                    font-weight: 300;
+                    font-size: 14px;
+                    color: $color-rd;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+
+}

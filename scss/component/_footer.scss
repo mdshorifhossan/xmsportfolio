@@ -1,0 +1,179 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#footer {
+
+    .contact_main {
+        h4 {
+            @include cmn_sub_head;
+        }
+
+        h3 {
+            @include cmn_main_head;
+
+            &::before {
+                left: 20%;
+            }
+        }
+    }
+
+
+    .contact_info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            padding: 20px 0 50px;
+            text-align: center;
+        }
+    }
+
+    .contact_footer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 50px;
+
+        .contact_add {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                text-align: left;
+
+                a {
+                    color: $color-bl;
+                }
+
+                span {
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .contact_media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+
+            a {
+                color: $color-bl-lg;
+                font-size: 32px;
+                transition: all linear 0.3s;
+
+                &:hover {
+                    color: $color-rd;
+                }
+            }
+
+            .pop_fb,
+            .pop_tw,
+            .pop_pi,
+            .pop_go,
+            .pop_in,
+            .pop_li,
+            .pop_gi {
+                position: absolute;
+                top: -130%;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 0 1px $color-bl;
+                opacity: 0;
+                width: 60%;
+                text-align: center;
+
+                font-weight: 500;
+                color: $color-bl;
+                padding: 10px 15px;
+                transition: all linear 0.3s;
+
+                span {
+                    color: $color-rd;
+                }
+            }
+
+            .show {
+                opacity: 1;
+            }
+        }
+    }
+
+
+    .contact_message {
+        .message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px;
+
+            textarea {
+                box-shadow: 0 0 1px $color-bl_2;
+                padding: 10px;
+                width: 100%;
+
+                &:focus {
+                    box-shadow: 0 0 2px $color-rd;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            a {
+                @include btn;
+            }
+
+            input {
+                padding: 10px;
+                width: 100%;
+                box-shadow: 0 0 1px $color-bl;
+                border: none;
+                outline: none;
+                text-transform: capitalize;
+
+                &:focus {
+                    box-shadow: 0 0 2px $color-rd;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+
+        .map {
+            box-shadow: 0 2px 5px $color-bl_2;
+            width: 100%;
+            height: 77%;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    .copy_right {
+        p {
+            margin-top: 50px;
+            padding: 30px 0;
+            text-align: center;
+            font-weight: 400;
+            color: $color-ff;
+            background: $color-gnd_hire;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}

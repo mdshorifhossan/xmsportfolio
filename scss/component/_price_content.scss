@@ -1,0 +1,112 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#price_content {
+    padding: 0 0 100px;
+
+    .price_main {
+        h4 {
+            @include cmn_sub_head;
+        }
+
+        h3 {
+            @include cmn_main_head;
+
+            &::before {
+                left: 20%;
+            }
+        }
+    }
+
+    .price_plan {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0px 0px 1px $color-bl;
+        padding: 30px 0 50px;
+
+        &:hover{
+            box-shadow: 0 10px 15px -3px $color-bl_1;
+            transform: scale(1.05);
+            background: $color-ff;
+            z-index: 2;
+        }
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            margin-top: 65px;
+        }
+
+        img {
+            width: 20%;
+        }
+
+        .pre_img {
+            width: 18%;
+        }
+
+        h2 {
+            padding: 40px 0 30px;
+            font-weight: 800;
+            font-weight: 32px;
+            color: $color-rd;
+            text-transform: capitalize;
+        }
+
+        ul {
+            li {
+                font-weight: 400;
+                font-size: 16px;
+                text-transform: capitalize;
+                text-align: center;
+                padding-bottom: 5px;
+            }
+        }
+
+        h3 {
+            padding: 30px 0 40px;
+            font-size: 32px;
+            font-weight: 700;
+            color: $color-rd;
+            text-transform: capitalize;
+
+            span {
+                color: $color-bl;
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+
+        a {
+            @include btn;
+        }
+    }
+
+    .hire_main {
+        background: $color-gnd_hire;
+        margin-top: 80px;
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        h2 {
+            font-weight: 700;
+            font-size: 32px;
+            color: $color-ff;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $color-ff;
+        }
+
+        a {
+            @include btn;
+        }
+    }
+}
