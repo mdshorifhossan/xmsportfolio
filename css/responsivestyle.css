@@ -743,7 +743,7 @@
     padding: 5px 15px;
   }
   #about_contnet {
-    padding: 100px 0 80px;
+    padding: 100px 0 20px;
   }
   #about_contnet .about_main {
     align-items: center;
@@ -815,7 +815,7 @@
     padding-top: 20px;
   }
   #service_content .container-fluid {
-    margin: 0 0 80px;
+    width: 100%;
   }
   #service_content .container-fluid .gl-lg {
     padding: 30px 0;
@@ -904,11 +904,11 @@
     left: 27%;
   }
   #price_content .col-xsm {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
   }
   #price_content .price_plan {
-    padding: 20px 0 30px;
+    padding: 30px 0 10px;
   }
   #price_content .price_plan:nth-child(2), #price_content .price_plan:nth-child(3) {
     margin-top: 30px;
